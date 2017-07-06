@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.didi.virtualapk.host'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.virtualapk.host"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore/test.keystore")
+            storePassword "test123456"
+            keyAlias "test"
+            keyPassword "test123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.didi.virtualapk:core:0.9.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+}

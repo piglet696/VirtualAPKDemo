@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">host</string>
+    <string name="host_tip">这是宿主工程</string>
+    <string name="load_more_image">看更多美图</string>
+</resources>

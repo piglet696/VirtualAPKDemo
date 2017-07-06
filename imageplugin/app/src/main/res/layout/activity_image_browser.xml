@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:text="我是图片浏览器插件"/>
+
+    <ImageView
+            android:id="@+id/iv_home_icon1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"/>
+
+    <ImageView
+            android:id="@+id/iv_home_icon2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"/>
+
+    <ImageView
+            android:id="@+id/iv_home_icon3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"/>
+
+</LinearLayout>
